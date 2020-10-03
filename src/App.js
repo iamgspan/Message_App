@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState([]);
+
+  const sendMessage = (e) => {
+    //all the functionality and logic for sending message goes here----------
+    console.log('in sendMessage function');
+    
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Messaging app</h1>
+      {/* We will be needing input field to type the message, a button to send the messsage, and the message itself. */}
+      <input type="text" value={input} onChange={e => setInput(e.target.value) } />
+      <button type="submit" onClick={sendMessage}>Send</button>
     </div>
   );
 }
