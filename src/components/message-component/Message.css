@@ -1,0 +1,27 @@
+/* The class names follow a convention called BEM. 
+The first part before __ indocates the component, and the part after __ indicates the element we want to style. */
+
+/* Design basic base style for card */
+.message__card {    
+    padding: 5px;
+    margin: 10px;    
+    width: fit-content;    
+}
+
+.message__user {
+    margin-left: auto;
+    padding: 5px;         
+    width: fit-content;   
+}
+
+/* Defines styles based on type of user, if we login then colored card, for others guest card */
+.message__selfLoginCard {
+    background-color: #47f50d !important;
+    border-radius: 20px !important;
+}
+
+.message__guestUserCard {
+    background-color: #e2e2e2 !important;
+    border-radius: 20px !important;
+}
+
