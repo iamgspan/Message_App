@@ -1,3 +1,9 @@
+
+h1 {
+    color: #000;
+}
+
+
 /* The class names follow a convention called BEM. 
 The first part before __ indocates the component, and the part after __ indicates the element we want to style. */
 
@@ -5,23 +11,34 @@ The first part before __ indocates the component, and the part after __ indicate
 .message__card {    
     padding: 5px;
     margin: 10px;    
-    width: fit-content;    
+    width: fit-content;
+    max-width: 60%;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .message__user {
     margin-left: auto;
     padding: 5px;         
-    width: fit-content;   
+    width: fit-content;
+    max-width:60%;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 /* Defines styles based on type of user, if we login then colored card, for others guest card */
 .message__selfLoginCard {
-    background-color: #47f50d !important;
-    border-radius: 20px !important;
+    background-color: #680482 !important;
+    color: #fff !important;
+    border-radius: 30px !important;
+    text-align: justify;    
+    /* overflow: hidden; */
 }
 
 .message__guestUserCard {
-    background-color: #e2e2e2 !important;
-    border-radius: 20px !important;
+    background-color: #fff !important;
+    color:  #680482 !important;
+    border-radius: 30px !important;
+    text-align: justify;    
+    /* overflow: auto; */
 }
-
